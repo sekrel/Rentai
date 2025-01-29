@@ -1,0 +1,37 @@
+{% load static%}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'companysite/css/styles.css' %}" rel="stylesheet">     
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Логотип">
+        <nav>
+            <ul>
+                <li><a href="#">Наши проекты</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Творчиство по игре</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="https://steam.com/Rentai" class="social-link steam"><img src="{% static 'companysite/images/discord.ico' %}" alt="Стим" width="50" height="50"></a>
+            <a href="https://vk.com/Rentai" class="social-link vk"><img src="{% static 'companysite/images/vk.png' %}" alt="ВК" width="50" height="50"></a>
+            <a href="https://discord.com/Rentai" class="social-link discord"><img src="{% static 'companysite/images/steam.png' %}" alt="Дискорд" width="50" height="50"></a>
+        </div>
+     </header>
+    <h1>Главная страница</h1>
+    <ul>
+    {% for new in posts %}
+        <li> {{new.title}} </li>
+        <li> {{new.content}} </li>
+        <li>{{new.time_create}} </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
