@@ -28,8 +28,8 @@
     <h1>Главная страница</h1>
     <ul>
     {% for new in posts %}
-        <li> {{new.title}} </li>
-        <li> {{new.content}} </li>
+        <li> <h2> {{new.title}} </h2></li>
+        <li> <p>{{new.content}}</p> </li>
         <li>{{new.time_create}} </li>
     {% endfor %}
     </ul>
