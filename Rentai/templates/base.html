@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 
 <!DOCTYPE html>
 
@@ -10,13 +10,13 @@
 
 <body>
     <header>
-        <img src="{% static 'companysite/images/handshakege.png' %}" alt="Логотип" width="50" height="50">
+        <a href="new" class="social-link steam"> <img src="{% static 'companysite/images/handshakege.png' %}" alt="Логотип" width="50" height="50"></a>
         <nav>
             <ul>
-                <li><a href="#">Наши проекты</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Творчиство по игре</a></li>
+                <li><a href="games">Наши проекты</a></li>
+                <li><a href="new">Новости</a></li>
+                <li><a href="about">О нас</a></li>
+                <li><a href="#">Творчиство по играм</a></li>
             </ul>
         </nav>
         <div class="social">
@@ -24,14 +24,8 @@
             <a href="https://vk.com/Rentai" class="social-link vk"><img src="{% static 'companysite/images/vk.png' %}" alt="ВК" width="50" height="50"></a>
             <a href="https://discord.com/Rentai" class="social-link discord"><img src="{% static 'companysite/images/steam.png' %}" alt="Дискорд" width="50" height="50"></a>
         </div>
-     </header>
-    <h1>Главная страница</h1>
-    <ul>
-    {% for new in posts %}
-        <li> <h2> {{new.title}} </h2></li>
-        <li> <p>{{new.content}}</p> </li>
-        <li>{{new.time_create}} </li>
-    {% endfor %}
-    </ul>
+    </header>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

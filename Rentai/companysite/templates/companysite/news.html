@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<ul>
-<li>
-  <h1>Тестовая новость </h1>
-  <p>Якобы очень при очень гигантский пост, но не из базы данных, и это очень печально, но с этим уже можно работать, в дальнейшем заменю на новости пополняющиеся из базы данных</p>>
-</li>
-</ul>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    {% for new in posts %}
+        <li> <h2> {{new.title}} </h2></li>
+        <li> <p>{{new.content}}</p> </li>
+        <li>{{new.time_create}} </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

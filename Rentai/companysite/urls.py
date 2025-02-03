@@ -4,5 +4,7 @@ from django.urls import path
 from companysite import views
 
 urlpatterns = [
-    path('', views.NewsListView.as_view()),
+    path('new', views.NewsListView.as_view()),
+    path('games', views.GamesListView.as_view()),
+    path('about', views.about),
 ]

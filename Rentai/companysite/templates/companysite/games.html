@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    {% for new in posts %}
+        <li> <h2> {{new.name}} </h2></li>
+        <li> <p>{{new.description}}</p> </li>
+        <li>{{new.genre}} </li>
+        <li>{{new.release_date}} </li>
+        <hr>
+    {% endfor %}
+    </ul>
+{% endblock %}
