@@ -1,4 +1,13 @@
-header {background-color: #e65183;
+@font-face {
+font-family: 'MyCustomFont';
+  src: url('../fonts/ShantellSans[BNCE\,INFM\,SPAC\,ital\,wght].woff2') 
+  format('truetype'); 
+}
+
+
+header {
+  background-color: #2b0098;
+  /* background-color: #e65183; */
 
 color: #eeb4ae;
 
@@ -53,5 +62,12 @@ text-decoration: none;
 }
 
 body {
-    background-image: url(../images/background.jpg);
+  font-family: 'MyCustomFont', sans-serif;
+    /* height */
+    background-image: url(../images/vertbackground.png);
+    /* background-image: url(../images/backgroundgrad.png); */
+    background-size:cover;
+    background-repeat: no-repeat
+    /* background-image: url(../images/background.jpg); */
   }
+
