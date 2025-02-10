@@ -1,25 +1,28 @@
 @font-face {
 font-family: 'MyCustomFont';
-  src: url('../fonts/ShantellSans[BNCE\,INFM\,SPAC\,ital\,wght].woff2') 
+  src: url('../fonts/ShantellSans[BNCE,INFM,SPAC,ital,wght].ttf') 
   format('truetype'); 
 }
 
 
 header {
-  background-color: #2b0098;
+  background: linear-gradient(180deg, 
+    rgba(255,255,255,0.1) calc(100% - 10px),
+    rgba(255,255,255,0.1) calc(100% - 10px),
+    rgba(255,255,255,0));
+  /* background-color:rgba(43,0,152, 0.8);
+  filter: blur(10px); */
+  /* background-color: #2b0098; */
   /* background-color: #e65183; */
 
-color: #eeb4ae;
+  color: #eeb4ae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
 
-display: flex;
-
-justify-content: space-between;
-
-align-items: center;
-
-padding: 10px 20px;
-            }
-            body, h1, h2, p, ul, li {
+body, h1, h2, p, ul, li {
 
 margin: 0;
 
@@ -62,7 +65,10 @@ text-decoration: none;
 }
 
 body {
-  font-family: 'MyCustomFont', sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-family: 'MyCustomFont', sans-serif;
+    font-weight: 800;
     /* height */
     background-image: url(../images/vertbackground.png);
     /* background-image: url(../images/backgroundgrad.png); */

@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <ul>
+{% block content %} 
+    
     {% for new in posts %}
-        <li> <h2> {{new.name}} </h2></li>
-        <li> <p>{{new.description}}</p> </li>
-        <li>{{new.genre}} </li>
-        <li>{{new.release_date}} </li>
-        <hr>
+        <div class="container-sm p-3 my-3 border">
+            <ul>
+                <li> <h2> {{new.name}} </h2></li>
+                <li> <p>{{new.description}}</p> </li>
+                <li>{{new.genre}} </li>
+                <li> <p class="font-weight-lighter"> {{new.release_date}} </p></li>
+            </ul>
+        </div>
     {% endfor %}
-    </ul>
 {% endblock %}
