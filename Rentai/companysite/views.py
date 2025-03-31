@@ -1,7 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import ListView
-from .models import New, Game
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView
+from .models import New, Game, Creation
+from .forms import ProductForm
 
 
 
@@ -35,4 +36,20 @@ class GamesListView(ListView):
 def about(request):
     return render(request, 'companysite/about.html', {'title': 'О нашей компании'})
     
+class CreationListView(ListView):
+    model = Creation
+    template_name = 'companysite/creations.html'
+    context_object_name = 'posts'
+    extra_context={
+        'title': 'Фанатское творчество', 
+    }
     
+
+class AddCreationCreateView(CreateView):
+    form_class = ProductForm 
+    template_name = 'companysite/add_creation.html'
+    success_url = reverse_lazy('creation')
+    extra_context={
+        'title': 'Фанатское творчество',
+    }
+   

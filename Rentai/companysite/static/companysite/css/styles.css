@@ -1,79 +1,38 @@
-@font-face {
-font-family: 'MyCustomFont';
-  src: url('../fonts/ShantellSans[BNCE,INFM,SPAC,ital,wght].ttf') 
-  format('truetype'); 
-}
-
-
-header {
-  background: linear-gradient(180deg, 
-    rgba(255,255,255,0.1) calc(100% - 10px),
-    rgba(255,255,255,0.1) calc(100% - 10px),
-    rgba(255,255,255,0));
-  /* background-color:rgba(43,0,152, 0.8);
-  filter: blur(10px); */
-  /* background-color: #2b0098; */
-  /* background-color: #e65183; */
-
-  color: #eeb4ae;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-body, h1, h2, p, ul, li {
-
-margin: 0;
-
-padding: 0;
-
-}
-nav ul {
-
-list-style: none;
-
-display: flex;
-
-}
-
-nav ul li {
-
-margin-right: 20px;
-
-}
-
-nav ul li:last-child {
-
-margin-right: 0;
-
-}
-
-nav ul li a {
-
-color: #eeb4ae;
-
-text-decoration: none;
-
-}
-.social a {
-
-color: #fff;
-
-text-decoration: none;
-
-}
-
 body {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-    font-family: 'MyCustomFont', sans-serif;
-    font-weight: 800;
-    /* height */
-    background-image: url(../images/vertbackground.png);
-    /* background-image: url(../images/backgroundgrad.png); */
-    background-size:cover;
-    background-repeat: no-repeat
-    /* background-image: url(../images/background.jpg); */
-  }
+  /* background-image: url(../images/vertbackground.png); */
+  /* background-size:cover;
+  background-repeat: no-repeat; */
+  /* background-image: url(../images/background5.jpg); */
+  /* background: linear-gradient(125deg, rgb(138,84,238) 0%, rgb(131,77,232) 35%, rgb(138,84,238) 35%, rgb(170,93,239) 75%, rgb(119,156,244) 100%); */
+  /* background: radial-gradient(ellipse  at 5%  90%, rgb(65,81,137) 0%, rgb(118,70,152) 40%, rgb(138,59,147) 50%, rgb(68,49,118) 60%, rgb(130,71,165) 100%) 70% 90%/195% 185%; */
+  background: conic-gradient(from 5deg at 25%  5%, rgba(162,52,78,0.62) 0%, rgba(150,59,164,0.27) 25%, rgba(171,73,152,0.53) 30%, rgb(169,57,105) 35%, transparent 100%) 45% 10%/110% 195%,
+              linear-gradient(330deg, rgb(137,77,174) 0%, rgb(171,64,125) 50%, rgb(102,47,150) 50%, rgb(103,42,128) 100%);
+}
+  
+  .container-sm, .btn{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: #fff;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.my-custom-container {
+  width: 100%;
+  max-width: 1349px; /* или другое значение */
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+}
 

@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container-sm p-3 my-3 border border-info rounded text text-light d-flex justify-content-center flex-grow-1">
+    <h1>Новости и сплетни о нас</h1>
+</div>
     {% for new in posts %}
-        <div class="container-sm p-3 my-3 border">
-            <ul>
+        <div class="container-sm p-3 my-3 border border-info rounded text text-light">
+            <ul class="list-unstyled">
                 <li> <h2> {{new.title}} </h2></li>
                 <li> <p>{{new.content}}</p> </li>
                 <li>{{new.time_create}} </li>

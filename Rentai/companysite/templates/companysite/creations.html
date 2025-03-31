@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="my-custom-container">
+    <div class="d-flex justify-content-between gap-2 mb-3">  <!-- justify-content-between для равномерного распределения -->
+        <div class="container-sm p-3 border border-info rounded text-light flex-grow-1">
+            Творчество комьюнити
+        </div>
+        <!-- <a href ="/add_creation" class="btn btn-outline-info">+</a> -->
+        <button onclick="window.location.href='/add_creation'" class="btn btn-outline-info">+</button>   
+    </div>
+</div>
+
+{% for creation in posts %}
+    <div class="container-sm p-3 my-3 border border-info rounded text-light">
+        <div class="list-unstyled">
+            <h2 class="mb-2">{{ creation.user_name }}</h2>
+            <p class="mb-2">{{ creation.text }}</p>
+            {% if creation.image %}
+                <img class="rounded img-fluid mb-2" src="{{ creation.image.url }}" alt="Изображение от {{ creation.user_name }}">
+            {% endif %}
+            <p class="mb-1">{{ creation.description }}</p>
+            <small class="text-muted">{{ creation.create_date }}</small>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

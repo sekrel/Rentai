@@ -1,10 +1,11 @@
-from django.template.defaulttags import url
 from django.urls import path
-
 from companysite import views
 
+
 urlpatterns = [
-    path('new', views.NewsListView.as_view()),
-    path('games', views.GamesListView.as_view()),
-    path('about', views.about),
+    path('', views.about, name = 'home'),
+    path('new/', views.NewsListView.as_view(), name = 'new'),
+    path('games/', views.GamesListView.as_view(), name = 'games'),
+    path('creation/', views.CreationListView.as_view(), name = 'creation'),
+    path('add_creation/', views.AddCreationCreateView.as_view(), name = 'add_creation'),
 ]
